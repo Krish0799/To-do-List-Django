@@ -1,0 +1,17 @@
+<html>
+{% load static %}
+{% load filter %}
+<link rel="stylesheet" href='{% static 'css/style.css' %}?{% now "U" %}'>
+<head><title>update Tasks</title></head>
+<body style ="font-family:Arial, Helvetica, sans-serif;">
+<h1> Edit Task</h1>
+
+<form  method = "POST" class = "form-group">
+{% csrf_token %}
+Task Name : <input  style="margin-bottom:8px;" type = text" name="tname" value="{{task.tname}}"></br>
+Task Detail : <input  style="margin-left:2px;" type = text" name="tDetails" value="{{task.tDetails}}"></br>
+<a class ="hbtn" href = "/">Cancle</a>
+<input type = "submit" value = "update Task">
+</form>
+</body>
+</html>
