@@ -6,6 +6,7 @@ from ToDoLi.forms import TaskForm
 # Create your views here.
 
 def display_Tasks(request):
+	# cmt-----
 	tsk = Task.objects.all()
 	return render(request,'ToDoLi/index.html',{'task':tsk})
 	
