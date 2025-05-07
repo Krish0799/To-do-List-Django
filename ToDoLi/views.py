@@ -7,6 +7,7 @@ from ToDoLi.forms import TaskForm
 
 def display_Tasks(request):
 	# cmt-----
+	# cmt --added by kk
 	tsk = Task.objects.all()
 	return render(request,'ToDoLi/index.html',{'task':tsk})
 	
